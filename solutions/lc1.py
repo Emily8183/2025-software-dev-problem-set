@@ -4,7 +4,6 @@ class Solution:
         hash = {}
 
         #for loop： Iterating list using enumerate to get both index and element
-        #而且不需要提前设置i和n
         for i, n in enumerate(nums):
             diff = target - n
 
