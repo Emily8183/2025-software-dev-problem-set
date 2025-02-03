@@ -1,3 +1,10 @@
+#
+# @lc app=leetcode id=1 lang=python3
+#
+# [1] Two Sum
+#
+
+# @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
@@ -13,3 +20,5 @@ class Solution:
             hash[n] = i
 
         return #因为这题确保有一个解，所以在Line18就会被return，这里不会被触发
+        
+# @lc code=end

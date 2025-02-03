@@ -1,3 +1,10 @@
+#
+# @lc app=leetcode id=36 lang=python3
+#
+# [36] Valid Sudoku
+#
+
+# @lc code=start
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         seen = set()
@@ -19,3 +26,6 @@ class Solution:
                     seen.add(f"{num} in box {i//3} {j//3}")
 
         return True
+        
+# @lc code=end
+
