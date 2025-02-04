@@ -4,8 +4,6 @@ My LeetCode profile: https://leetcode.com/u/Emily8183/
 
 **Language: Python**
 
-As you work through the problem set, store a solution file for each problem in the `solutions` directory.
-
 | Sequence | Difficulty | Problem Name                                              | Data Stucture/Algorithm Type      | Link to Leetcode Problem                                                                                                         | Link to NeetCode Solution                                                                                            |
 | -------- | ---------- | --------------------------------------------------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | 1        | Easy       | Contains Duplicate                                        | Arrays & Hashing                  | [Link To LeetCode Problem](https://leetcode.com/problems/contains-duplicate/description/)                                        | [Link To NeetCode Solution](https://neetcode.io/solutions/contains-duplicate)                                        |
