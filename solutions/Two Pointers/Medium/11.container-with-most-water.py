@@ -21,7 +21,6 @@ class Solution:
 
             current_height = min(height[left], height[right])
 
-            # 宽度（右指针 - 左指针
             size = (right-left) * current_height
 
             max_size = max(max_size, size)
