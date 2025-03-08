@@ -2,9 +2,6 @@
  * @lc app=leetcode id=238 lang=java
  *
  * [238] Product of Array Except Self
- * 1) two traversals, forward and backward
- * 2) use cur to temporarily save the product
- * 
  */
 
 // @lc code=start
