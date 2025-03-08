@@ -4,11 +4,6 @@
  * [3] Longest Substring Without Repeating Characters
  * 
  * sliding window + hashset
- * 1) set.add()
- * 2) int start = 0, int end = 
- * if (!set.add()) 
- * 3) start = i + 1
- * 4) int len = 0; Math.max(len, max);
  * 
  */
 
