@@ -51,6 +51,7 @@ class Solution {
         ListNode slow = head;
 
         while (fast.next != null && fast.next.next != null) {
+            // while (fast != null && fast.next != null) { <=这是错的
             slow = slow.next;
             fast = fast.next.next;
         }
