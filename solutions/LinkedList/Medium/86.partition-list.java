@@ -38,7 +38,7 @@ class Solution {
         }
 
         
-        d2.next = null;  //断开 >= x 部分的尾部，防止循环链表
+        d2.next = null;  //因为d2.next = head，head所遍历到的节点可能还拖了一个其他节点，因此需要断开，防止循环链表
         
         // d1.next = d2.next; <= 错误的指向
         d1.next = dummy2.next;

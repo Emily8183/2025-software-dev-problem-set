@@ -1,0 +1,32 @@
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        //solution1: two passes
+        
+
+        //solution2: one pass
+        //need a dummyNode for the edge case when the head needs to be removed
+        ListNode dummyHead = new ListNode(-1);
+
+        dummyHead.next = head;
+        ListNode slow = dummyHead;
+        ListNode fast = dummyHead;
+
+        //  [1, 2, 3,4,5]
+        //        fast
+        for (int i = 0; i <= n; i++) {
+            fast = fast.next; 
+        }
+
+        //      [1,  2,   3,  4,   5]
+        //               slow         fast
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        slow.next = slow.next.next;
+
+        return dummyHead.next;
+        
+    }
+}
