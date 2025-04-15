@@ -5,7 +5,9 @@
  * [155] Min Stack
  * 这道题目要求通过getMin()能够以O(1)的速度得到最小值.
  * 
- * Solution: maintain two stacks.
+ * Solution: 
+ * 1) maintain two stacks
+ * 2) 每次push()存储一个一维数组{val,min}
  */
 
 // @lc code=start
@@ -13,40 +15,32 @@
 import java.util.Stack;
 
 class MinStack {
-    private Stack<Integer> stack;
-    private Stack<Integer> minStack;
 
-    public MinStack() {
+    Stack<int[]> stack;
+
+    int min;
+
+    MinStack() {
         stack = new Stack<>();
-        minStack = new Stack<>();
     }
 
-    public void push(int val) {
-        //notice: minStack.isEmpty()
-        if (minStack.isEmpty() || minStack.peek() >= val) minStack.push(val);
-
-        stack.push(val);
+    void push(int val) {
+      
+        min = stack.isEmpty()? val : Math.min(val, stack.peek()[1]);
+        stack.push(new int[] {val,min});
     }
 
-    public void pop() {
-        // if (stack.peek() == minStack.peek()) { <= wrong syntax
-        //since they are Integer objects, here we should use .equals()
-        if (stack.peek().equals(minStack.peek())) {
-            minStack.pop();
-        }
-
+    void pop() {
         stack.pop();
     }
 
-    public int top() {
-        return stack.peek();
+    int top() {
+        return stack.peek()[0];
     }
 
-    public int getMin() {
-        return minStack.peek();
-
+    int getMin() {
+        return stack.peek()[1];
     }
-    
 }
 
 /**
